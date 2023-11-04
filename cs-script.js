@@ -1,6 +1,6 @@
 jQuery(document).ready(function(){
 
-    jQuery("#sc_ajax_add_to_cart").click(function(e) {
+    jQuery(".sc_ajax_add_to_cart").click(function(e) {
         e.preventDefault();
 
         var n_data = {

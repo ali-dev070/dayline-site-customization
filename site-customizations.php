@@ -82,9 +82,11 @@ function sc_filter_shop_page_add_to_cart_button( $html, $product, $args ) {
 	if ( ! is_shop() ) {
 		return $html;
 	}
+
 	//var_dump($product->get_type());
 	global $wpdb;
-	$options_count = $wpdb->get_var( "SELECT COUNT(*) FROM dl_pofw_product_option WHERE product_id={$product->get_id()}" );
+	$pid = $product->get_id();
+	$options_count = $wpdb->get_var( "SELECT COUNT(*) FROM dl_pofw_product_option WHERE product_id={$pid}" );
 
 	if ($options_count == 0) {
 
@@ -99,8 +101,8 @@ function sc_filter_shop_page_add_to_cart_button( $html, $product, $args ) {
 
 	return sprintf(
 		'<a href="" class="%s" id="%s" %s >%s</a>',
-		'button product_type_simple',
-		'sc_ajax_add_to_cart',
+		'button product_type_simple sc_ajax_add_to_cart',
+		'sc_ajax_add_to_cart-' . $pid,
 		isset( $args['attributes'] ) ? wc_implode_html_attributes( $args['attributes'] ) : '',
 		_( 'Add to cart' )
 	);
