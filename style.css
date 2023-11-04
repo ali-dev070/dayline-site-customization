@@ -1,0 +1,17 @@
+div.pofw-toppings-box{
+	width: 100%!important;
+    padding: 0 0 15px 0!important;
+}
+
+div.choice label span:nth-child(1) {
+  width: 75%;
+}
+
+div.choice label span:nth-child(2) {
+  width: 25%;
+  float: right;
+}
+
+.added_to_cart{
+  display: none!important;
+}
