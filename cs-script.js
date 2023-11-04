@@ -5,7 +5,7 @@ jQuery(document).ready(function(){
 
         var n_data = {
 			action: 'cs_add_to_cart',
-			productid: jQuery('#sc_ajax_add_to_cart').attr('data-product_id')
+			productid: jQuery(this).attr('data-product_id')
 		};
 
         var ajaxurl = ilaa_ajax_object.ajaxurl;
@@ -21,5 +21,5 @@ jQuery(document).ready(function(){
 
         return false;
     });
-    
+
 });
