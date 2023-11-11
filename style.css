@@ -15,3 +15,9 @@ div.choice label span:nth-child(2) {
 .added_to_cart{
   display: none!important;
 }
+
+@media only screen and (max-width: 412px) {
+  .woocommerce ul.products li.product a .woocommerce-loop-product__title {
+    height: 44px;
+  }
+}

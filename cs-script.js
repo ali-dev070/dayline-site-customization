@@ -30,7 +30,7 @@ jQuery(document).ready(function(){
                     jQuery("body").trigger("wc_fragments_refreshed");
                     jQuery(".sc_ajax_add_to_cart").removeClass("loading");
 
-                    jQuery("#fkcart-modal").addClass("fkcart-show").show();
+                    jQuery("#fkcart-modal").addClass("fkcart-show");
                 });
 			}
 

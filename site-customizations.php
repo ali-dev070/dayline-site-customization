@@ -83,6 +83,8 @@ function sc_filter_shop_page_add_to_cart_button( $html, $product, $args ) {
 		return $html;
 	}
 
+	//No Add to cart button.
+	return '';
 	//var_dump($product->get_type());
 	global $wpdb;
 	$pid = $product->get_id();
